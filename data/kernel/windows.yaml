@@ -1,0 +1,3 @@
+include chocolatey
+include powershell
+notify {'Hello World':}
