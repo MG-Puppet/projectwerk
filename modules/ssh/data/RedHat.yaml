@@ -1,0 +1,5 @@
+ssh::pkg_name: 'openssh-server'
+ssh::service_name: 'sshd'
+ssh::config_path: '/etc/ssh/sshd_config'
+ssh::config_source: "puppet:///modules/ssh/sshd_conf.redhat"
+ssh::provider: 'yum'

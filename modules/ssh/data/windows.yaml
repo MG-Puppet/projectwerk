@@ -1,0 +1,5 @@
+ssh::pkg_name: 'openssh'
+ssh::service_name: 'sshd'
+ssh::config_path: 'C:/Program Files/OpenSSH-Win64/sshd_config_default'
+ssh::config_source: "puppet:///modules/ssh/sshd_conf.windows"
+ssh::provider: 'chocolatey'
