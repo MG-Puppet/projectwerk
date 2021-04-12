@@ -59,7 +59,7 @@ PermitEmptyPasswords no
 #AllowTcpForwarding yes
 #GatewayPorts no
 #PermitTTY yes
-#PrintMotd yes
+PrintMotd yes
 #PrintLastLog yes
 #TCPKeepAlive yes
 #UseLogin no
@@ -74,7 +74,7 @@ ClientAliveInterval 300
 #VersionAddendum none
 
 # no default banner path
-#Banner none
+Banner 'C:\Program Files\OpenSSH-Win64\legalnotice.txt'
 
 # override default of no subsystems
 Subsystem	sftp	sftp-server.exe

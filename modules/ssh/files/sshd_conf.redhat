@@ -94,7 +94,7 @@ X11Forwarding yes
 #X11DisplayOffset 10
 #X11UseLocalhost yes
 #PermitTTY yes
-PrintMotd no
+PrintMotd yes
 #PrintLastLog yes
 #TCPKeepAlive yes
 #PermitUserEnvironment no
@@ -109,7 +109,7 @@ PrintMotd no
 #VersionAddendum none
 
 # no default banner path
-#Banner none
+Banner /etc/issue.net
 
 # Allow client to pass locale environment variables
 AcceptEnv LANG LC_*

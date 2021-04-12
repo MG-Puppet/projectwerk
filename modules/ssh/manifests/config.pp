@@ -5,4 +5,9 @@ class ssh::config {
     source => "${ssh::config_source}",
   }
 
+  file { "${ssh::legalnotice_path}":
+    ensure => present, 
+    source => "${ssh::legalnotice_source}",
+  }
+
 }

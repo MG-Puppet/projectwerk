@@ -3,3 +3,5 @@ ssh::service_name: 'ssh'
 ssh::config_path: '/etc/ssh/sshd_config'
 ssh::config_source: "puppet:///modules/ssh/sshd_conf.debian"
 ssh::provider: 'apt'
+#ssh::legalnotice_path: '/etc/issue.net'
+#ssh::legalnotice_source: "puppet:///modules/ssh/legalnotice.net"

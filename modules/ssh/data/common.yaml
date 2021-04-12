@@ -1,1 +1,2 @@
---- {}
+ssh::legalnotice_path: '/etc/issue.net'
+ssh::legalnotice_source: "puppet:///modules/ssh/legalnotice.net"
