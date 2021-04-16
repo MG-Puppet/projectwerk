@@ -1,0 +1,5 @@
+--- {}
+nftables::pkg_name: 'nftables'
+nftables::service_name: 'nftables'
+nftables::config_dir: '/etc/nftables/puppet'
+nftables::config_source: "puppet:///modules/nftables/nftables.conf"

@@ -1,0 +1,46 @@
+#!/usr/sbin/nft -f
+#Config File managed by Puppet. Manual changes will be reverted. 
+
+flush ruleset
+
+table inet filter {
+	set IN_TCP_DPORT {
+	    type inet_service
+	    elements = { 22 }
+	}
+	set OUT_TCP_DPORT {
+	    type inet_service
+	    elements = { 80, 443, 8140 }
+	}
+	set OUT_UDP_DPORT {
+	    type inet_service
+	    elements = { 53 }
+	}
+	#include /etc/nftables/puppet/*puppet.nft"
+
+        chain input {
+                type filter hook input priority 0; policy drop;
+                # Allow State traffic
+		ct state established, related accept
+		iifname lo accept
+		# Allow ICMP Traffic for TroubleShooting
+		ip protocol icmp accept
+		# Allow Incoming TCP Traffic
+		tcp dport @IN_TCP_DPORT accept
+        }
+        chain forward {
+                type filter hook forward priority 0; policy drop;
+        }
+        chain output {
+                type filter hook output priority 0; policy drop;
+		# Allow State Traffic
+		ct state established, related accept
+		oifname lo accept
+		# Allow Outgoing TCP Traffic / See TCP Set
+		tcp dport @OUT_TCP_DPORT accept
+		udp dport @OUT_UDP_DPORT accept
+        }
+
+}
+
+
