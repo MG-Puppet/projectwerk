@@ -12,13 +12,14 @@ node 'w10-puppet' {
 
 node 'centos-agent.mitchell.test' {
   include motd
-  include ssh  
+  include nftables  
+  include ssh
 }
 
 node 'ubnt-agent.mitchell.test' {
   class { 'motd':
     dynamic_motd => false,
   }
+  include nftables
   include ssh
-
 }
