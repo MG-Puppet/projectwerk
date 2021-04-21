@@ -1,0 +1,10 @@
+windows::firewall::individual_firewall_rules:
+    'SSH':
+      description:                "Managed by Puppet -- Allows SSH on default Port"
+      local_port:                 "22"
+      protocol:                   "tcp"
+    'Allow-ICMPv4':
+      description:                "Managed by Puppet -- Allows Ingress ICMP Traffic"
+      protocol:                   "icmpv4"
+      icmp_type:                  "8"
+      program:                    "System"

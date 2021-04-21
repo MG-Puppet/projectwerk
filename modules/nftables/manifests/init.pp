@@ -4,8 +4,6 @@ class nftables (
   Array $config_dirs,
   String $config_file,
   String $config_source,
-  Optional[String] $inet_filter_file	= undef,
-  Optional[String] $inet_filter_source	= undef,
   String $native_fw,
 ) {
 

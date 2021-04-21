@@ -10,8 +10,4 @@ class ssh::config {
     source => "${ssh::legalnotice_source}",
   }
 
-  #nftables::rule { 'ISAKMP':
-   # rule => "add element inet filter IN_TCP_DPORT { 500 }",
-  #}
-
 }

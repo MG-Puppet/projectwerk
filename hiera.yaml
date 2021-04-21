@@ -8,10 +8,12 @@ defaults:
   # datadir: data
   # data_hash: yaml_data
 hierarchy:
-  - name: "Per-node data (yaml version)"
+  - name: "Per-node Data (yaml version)"
     path: "nodes/%{::trusted.certname}.yaml"
-  - name: "Per-kernel data"
-    path: "kernel/%{facts.kernel}.yaml"
+  - name: "Per-OS Data (yaml)"
+    path: 'os/%{facts.os.family}.yaml'
+  - name: "Per-Kernel Data (yaml)"
+    path: 'kernel/%{facts.kernel}.yaml'
   - name: "Other YAML hierarchy levels"
     paths:
       - "common.yaml"

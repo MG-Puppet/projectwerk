@@ -1,11 +1,9 @@
 nftables::native_fw: 'firewalld'
 nftables::config_file: '/etc/sysconfig/nftables.conf'
-nftables::inet_filter_file: '/etc/nftables/inet-filter'
 nftables::pkg_name: 'nftables'
 nftables::service_name: 'nftables'
 nftables::config_dirs: 
   - '/etc/nftables'
   - '/etc/nftables/puppet'
-nftables::config_source: "puppet:///modules/nftables/nftables.conf.RedHat"
-nftables::inet_filter_source: "puppet:///modules/nftables/inet-filter.RedHat"
+nftables::config_source: "puppet:///modules/nftables/nftables.conf"
 

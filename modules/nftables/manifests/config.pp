@@ -10,11 +10,5 @@ class nftables::config {
     ensure => present,
     source => "${nftables::config_source}", 
   }
-  if $facts['os']['family'] == 'RedHat' {
-    file { "${nftables::inet_filter_file}":
-      ensure => present,
-      source => "${nftables::inet_filter_source}",
-    }
-  }
 
 }
