@@ -1,7 +1,7 @@
 class profile::ntp_client {
     if $facts['kernel'] == 'Linux' {
       class { 'ntp':
-        servers        => ['192.168.153.180'],
+        servers        => ['192.168.153.180', '192.168.153.210'],
         restrict       => ['127.0.0.1'],
         service_enable => true,
       }
