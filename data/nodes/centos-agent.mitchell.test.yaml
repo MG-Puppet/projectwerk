@@ -1,0 +1,7 @@
+apache::vhost:
+  'centos.mitchell.test':
+    port:    '443'
+    docroot: '/var/www/centos'
+    docroot_owner: 'www-data'
+    docroot_group: 'www-data'
+    ssl:     true

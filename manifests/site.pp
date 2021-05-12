@@ -18,9 +18,11 @@ node 'w10-puppet' {
 node 'centos-agent.mitchell.test' {
   include profile::security_baseline
   include profile::ntp_client
+  include profile::apache
 }
 
 node 'ubnt-agent.mitchell.test' {
   include profile::security_baseline
   include profile::ntp_client
+  include profile::apache
 }

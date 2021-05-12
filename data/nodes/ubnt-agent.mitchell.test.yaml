@@ -1,0 +1,7 @@
+apache::vhost:
+  'ubuntu.mitchell.test':
+    port:          '80'
+    docroot:       '/var/www/ubuntu'
+    docroot_owner: 'www-data'
+    docroot_group: 'www-data'
+
