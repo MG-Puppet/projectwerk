@@ -1,7 +1,8 @@
 node 'srv19-dc1.mitchell.test' {
    include profile::security_baseline
-   include profile::windows_firewall
+   #include profile::windows_firewall
    include profile::ntp_server
+   include profile::iis
 }
 
 node 'ubnt-pps.mitchell.test' {
@@ -11,8 +12,9 @@ node 'ubnt-pps.mitchell.test' {
 
 node 'w10-puppet' {
   include profile::security_baseline
-  include profile::windows_firewall
+  #include profile::windows_firewall
   include profile::ntp_client
+  include profile::iis
 }
 
 node 'centos-agent.mitchell.test' {
@@ -25,4 +27,14 @@ node 'ubnt-agent.mitchell.test' {
   include profile::security_baseline
   include profile::ntp_client
   include profile::apache
+}
+
+node 'webserver.mitchell.test' {
+
+  include profile::security_baseline
+  include profile::windows_firewall
+  include profile::ntp_client
+  include profile::iis
+
+
 }

@@ -1,3 +1,4 @@
+# Windows Firewall Rules
 windows::firewall::individual_firewall_rules:
     'NTP':
       description:               "Managed by Puppet -- Allows Time Sync using NTP"
