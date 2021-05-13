@@ -1,0 +1,12 @@
+# IIS Data
+profile::iis::iis_site: 'windows'
+profile::iis::physicalPath: 'c:/inetpub/windows'
+profile::iis::applicationPool: 'DefaultAppPool'
+profile::iis::siteDirName: 'windows'
+profile::iis::siteDirPath: 'c:/inetpub/windows'
+# Windows Firewall Rules
+windows::firewall::individual_firewall_rules:
+  'HTTP':
+    description:    "Managed by Puppet -- Allow Incoming HTTP Traffic"
+    local_port:     "80"
+    protocol:       "tcp"
