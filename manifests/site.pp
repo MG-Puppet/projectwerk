@@ -7,6 +7,7 @@ node 'srv19-dc1.mitchell.test' {
 node 'ubnt-pps.mitchell.test' {
   include profile::puppet_server_base
   include profile::ntp_server
+  include profile::puppetdb
 }
 
 node 'centos-agent.mitchell.test' {

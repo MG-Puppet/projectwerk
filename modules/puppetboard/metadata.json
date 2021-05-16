@@ -1,0 +1,52 @@
+{
+  "name": "puppet-puppetboard",
+  "version": "7.0.2",
+  "author": "Vox Pupuli",
+  "summary": "Install and configure PuppetBoard",
+  "license": "Apache-2.0",
+  "source": "https://github.com/voxpupuli/puppet-puppetboard.git",
+  "project_page": "https://github.com/voxpupuli/puppet-puppetboard",
+  "issues_url": "https://github.com/voxpupuli/puppet-puppetboard/issues",
+  "dependencies": [
+    {
+      "name": "puppetlabs/stdlib",
+      "version_requirement": ">= 4.13.1 < 7.0.0"
+    },
+    {
+      "name": "puppet/python",
+      "version_requirement": ">= 1.12.0 < 6.0.0"
+    },
+    {
+      "name": "puppetlabs/vcsrepo",
+      "version_requirement": ">= 1.3.1 < 4.0.0"
+    }
+  ],
+  "data_provider": null,
+  "tags": [
+    "puppetboard",
+    "puppetdb",
+    "voxpupuli"
+  ],
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "Debian",
+      "operatingsystemrelease": [
+        "9",
+        "10"
+      ]
+    },
+    {
+      "operatingsystem": "Ubuntu",
+      "operatingsystemrelease": [
+        "16.04",
+        "18.04"
+      ]
+    }
+  ],
+  "requirements": [
+    {
+      "name": "puppet",
+      "version_requirement": ">= 5.5.8 < 7.0.0"
+    }
+  ]
+}
